@@ -1,4 +1,5 @@
-import { useAuth } from "../hooks/UseAuth";
+import React from 'react';
+import { useAuth } from "./UseAuth.tsx";
 
 export const Secret = () => {
   const { logout } = useAuth();
@@ -9,7 +10,7 @@ export const Secret = () => {
 
   return (
     <div>
-      <h1>This is a Secret page</h1>
+      <h1>Presione el siguiente boton para cerrar sesión</h1>
       <button onClick={handleLogout}>Logout</button>
     </div>
   );

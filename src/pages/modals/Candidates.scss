@@ -1,0 +1,88 @@
+
+
+.candidatoDiv{
+  
+  .candidate-list {
+    margin-top: 20px;
+    width: var(--div-width, 330px);
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    li {
+      padding: 5px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .delete-button{
+      color: #fff;
+      background-color: rgb(158, 21, 21);
+    }
+  }
+}
+
+.modal-container{
+  .row{
+    .modal-form{
+      .form-group{
+        .candidatos{
+          width: fit-content;
+        }
+
+        .title{
+          padding: 10px;
+          border-radius: 15px;
+          color: black;
+          background-color: #ececec;
+          margin-bottom: 0px;
+          width: 50%;
+          font-size: 100%;
+        }
+
+        margin: 10px 5px 5px 5px;
+
+      }
+
+    /*   .modal-form.candidatos{
+          display: flex;
+          justify-content: center;
+      }
+ */
+      .plus-button {
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        margin: 15px;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .butto-enabled{
+        background-color: #ff9800;
+        &:hover {
+          background-color: #e68900;
+        }
+      }
+
+      .butto-disabled{
+        background-color: #666464;
+      }
+
+    }
+  }
+}
+
+.modal-form{
+  .form-group{
+    .candidatoDiv{
+      .row{
+        width: 580px;
+      }
+    }
+  }
+}

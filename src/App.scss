@@ -1,0 +1,62 @@
+// Definir variables para colores y tamaños
+$primary-bg-color: #282c34;
+$link-color: #61dafb;
+$text-color: white;
+$logo-animation-duration: 20s;
+$font-size-calc: calc(10px + 2vmin);
+
+.App {
+  text-align: center;
+  overflow-y: auto; /* Habilitar el desplazamiento vertical */
+
+  &-logo {
+    height: 40vmin;
+    pointer-events: none;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: App-logo-spin infinite $logo-animation-duration linear;
+    }
+  }
+
+  &-header {
+    background-color: $primary-bg-color;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-calc;
+    color: $text-color;
+  }
+
+  &-link {
+    color: $link-color;
+  }
+  overflow-y: auto; /* Habilitar el desplazamiento vertical */
+}
+
+.container-fluid{
+  background-color: rgb(248, 208, 31);
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 35px;
+
+  .navbar-brand{
+    align-items: center;
+    display: flex;
+  }
+  max-height: 100vh; // Define la altura máxima del contenedor
+  overflow-y: auto; // Habilitar el desplazamiento vertical
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

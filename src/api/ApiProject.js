@@ -9,12 +9,12 @@ app.use(cors());
 
 
 let users = [
-    new User('123', 'Juan', 'juan@gmail.com','123')
+    new User('123','1234', 'Juan', 'juan@gmail.com','20001227','123')
 ];
 
 // Endpoint para crear un nuevo usuario (POST /users)
 app.post('/users', (req, res) => {
-    const { dpi, username, email, password } = req.body;
+    const { member, dpi, username, email, birthdate,password } = req.body;
     console.log('*********** metoto login');
     console.log(dpi, username, email, password );
 
@@ -26,27 +26,20 @@ app.post('/users', (req, res) => {
     }else{
     // Agregar nuevo usuario
         
-        const newUser = { dpi, username, email, password };
+        const newUser = {member, dpi, username, email, birthdate,password };
               users.push(newUser);
-              console.log('newUser');
-              console.log(users);
+              
         return res.status(201).json({ message: 'Usuario creado exitosamente' }); 
     }
-
-
 });
 
 // Ruta de login
 app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-    
-    console.log('*********** metoto login');
-    console.log(username, password);
-    console.log(users);
+    const { dpi, password } = req.body;
+
     // Validar si el usuario existe y la contraseña es correcta
-    const user = users.find(user => user.email === username && user.password === password);
-    console.log(!user);
-    console.log(user);
+     const user = users.find(user => user.dpi === dpi && user.password === password);
+
     if (!user) {
         return res.status(200).json({ message: 'Correo electrónico o contraseña incorrecta' });
     }
